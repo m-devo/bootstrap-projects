@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Account</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f0f2f5;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container form-container">
+    <div class="bg-white p-4 shadow rounded">
+      <h3 class="text-center mb-4">Create Account</h3>
+
+      <form id="registerForm" class="needs-validation" novalidate>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="regName" placeholder="Full Name" required>
+          <label for="regName">Full Name</label>
+          <div class="invalid-feedback">Please enter your full name.</div>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="regEmail" placeholder="name@example.com" required>
+          <label for="regEmail">Email address</label>
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control" id="regPhone" placeholder="Phone Number" required
+            pattern="^[0-9]{10,15}$">
+          <label for="regPhone">Phone Number</label>
+          <div class="invalid-feedback">Please enter a valid phone number.</div>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="date" class="form-control" id="regDob" required>
+          <label for="regDob">Date of Birth</label>
+          <div class="invalid-feedback">Please select your date of birth.</div>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="regPassword" placeholder="Password" required minlength="6">
+          <label for="regPassword">Password</label>
+          <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="regConfirmPassword" placeholder="Confirm Password" required>
+          <label for="regConfirmPassword">Confirm Password</label>
+          <div class="invalid-feedback">Passwords must match.</div>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label d-block">Gender</label>
+          <div class="needs-validation" id="genderGroup" novalidate>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="invalid-feedback d-block">
+              Please select your gender.
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid">
+          <button class="btn btn-success" type="submit">Register</button>
+        </div>
+
+        <p class="text-center mt-3">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
